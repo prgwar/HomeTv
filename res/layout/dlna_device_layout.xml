@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/title_hint_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_dlna_hint" />
+
+    <TextView
+        style="@style/title_hint_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableBottom="@null"
+        android:text="@string/dlna_play_device_hint" />
+
+    <ViewSwitcher
+        android:id="@+id/switcher_about_dlna_play_device"
+        android:layout_width="fill_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="5dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false" 
+        android:clickable="false"
+        >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left|center"
+            android:gravity="center"
+            android:text="@string/no_device" 
+            android:textColor="#000000"
+            />
+
+        <ListView
+            android:id="@+id/lv_dlna_play_devices"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/item_divider_gray"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:listSelector="@drawable/program_list_item_style" >
+        </ListView>
+    </ViewSwitcher>
+
+    <!-- ************************************** -->
+
+    <TextView
+        style="@style/title_hint_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableBottom="@null"
+        android:text="@string/dlna_resource_device_hint" />
+
+    <ViewSwitcher
+        android:id="@+id/switcher_about_dlna_res_device"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left|center"
+            android:gravity="center"
+            android:text="@string/no_device" 
+            android:textColor="#000000"
+            />
+
+        <ListView
+            android:id="@+id/lv_dlna_res_devices"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/item_divider_gray"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:listSelector="@drawable/program_list_item_style" >
+        </ListView>
+    </ViewSwitcher>
+
+</LinearLayout>

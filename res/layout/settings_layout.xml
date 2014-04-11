@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#19191b">
+
+    <include
+        android:layout_width="fill_parent"
+        layout="@layout/common_head_layout" />
+
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:fadingEdge="none"
+        >
+        <LinearLayout 
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+            >
+
+            <TextView
+                style="@style/title_hint_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/title_connect_stb" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20.0dp"
+                android:layout_marginRight="20.0dp"
+                android:layout_marginTop="8.0dp"
+                >
+                <ToggleButton 
+                android:id="@+id/togglebtn_turn_remote_net_on"
+               	style="@style/toggle_btn_style"
+                 />
+                <LinearLayout 
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+					android:layout_marginLeft="80dp"	
+                     >
+                    <TextView
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         style="@style/setting_item_textview_style"
+                         android:text="@string/remote_connect"
+                        />
+                     <TextView
+                         android:layout_marginTop="5.0dp"
+                         android:id="@+id/tv_cur_login_user"
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         android:text="用户名已登陆"
+                         android:textSize="@dimen/setting_item_downstair_textsize"
+                         style="@style/setting_item_textview_style"
+                        />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tvbtn_arrow_to_remote" 
+                    style="@style/setting_arrow_right_style"/>
+                
+            </RelativeLayout>
+            <View  style="@style/setting_item_divide_style" 
+                android:layout_marginTop="5.0dp"/>
+            <!-- 局域网连接 -->
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20.0dp"
+                android:layout_marginRight="20.0dp"
+                android:layout_marginTop="8.0dp"
+                >
+                <ToggleButton 
+                android:id="@+id/togglebtn_turn_local_net_on"
+                style="@style/toggle_btn_style"
+                 />
+                <LinearLayout 
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+					android:layout_marginLeft="80dp"	
+                     >
+                    <TextView
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         style="@style/setting_item_textview_style"
+                         android:text="@string/local_connect"
+                        />
+                     <TextView
+                         android:layout_marginTop="5.0dp"
+                         android:id="@+id/tv_cur_local_connected_ip"
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         style="@style/setting_item_textview_style"
+                         android:text="设备名IP已连接"
+                        />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tvbtn_arrow_to_local" 
+                   style="@style/setting_arrow_right_style"/>
+                
+            </RelativeLayout>
+            <View  style="@style/setting_item_divide_style" 
+                android:layout_marginTop="5.0dp"/>
+            <!-- 遥控设置 -->
+            <TextView
+                style="@style/title_hint_style"
+                android:text="@string/title_remote_set"
+                />
+			<FrameLayout
+	            android:layout_marginLeft="20.0dp"
+                android:layout_marginRight="20.0dp"
+                android:layout_marginTop="8.0dp"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+            >
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="left|center"
+                android:gravity="center"
+                android:textSize="@dimen/setting_item_text_size"
+                android:textColor="#ffffff"
+                android:text="@string/sensor_accelerator"
+                />
+            <ToggleButton 
+                android:id="@+id/togglebtn_turn_sensor_speed_on"
+                
+                android:layout_gravity="right|center"
+                 style="@style/toggle_btn_style"
+                 />
+        </FrameLayout> 
+        <View  style="@style/setting_item_divide_style" />
+                    
+          <FrameLayout
+	            android:layout_marginLeft="20.0dp"
+                android:layout_marginRight="20.0dp"
+                android:layout_marginTop="8.0dp"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+            >
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="left|center"
+                android:gravity="center"
+                android:textSize="@dimen/setting_item_text_size"
+                android:textColor="#ffffff"
+                android:text="@string/sensor_orientation"
+                />
+            <ToggleButton 
+                android:id="@+id/togglebtn_turn_sensor_orientation_on"
+                android:layout_gravity="right|center"
+                style="@style/toggle_btn_style"
+                 />
+        </FrameLayout> 
+       <View  style="@style/setting_item_divide_style" />
+           <TextView
+               style="@style/title_hint_style"
+                android:text="@string/title_tv_set"
+                />
+			<FrameLayout
+	            android:layout_marginLeft="20.0dp"
+                android:layout_marginRight="20.0dp"
+                android:layout_marginTop="8.0dp"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+            >
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="left|center"
+                android:gravity="center"
+                android:textSize="@dimen/setting_item_text_size"
+                android:textColor="#ffffff"
+                android:text="@string/allow_play_tv"
+                />
+            <ToggleButton 
+                android:id="@+id/togglebtn_turn_can_play_on"
+                android:layout_gravity="right|center"
+                style="@style/toggle_btn_style"
+                 />
+        </FrameLayout> 
+       <View  style="@style/setting_item_divide_style" />   
+          <FrameLayout
+	            android:layout_marginLeft="20.0dp"
+                android:layout_marginRight="20.0dp"
+                android:layout_marginTop="8.0dp"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+            >
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="left|center"
+                android:gravity="center"
+                android:textSize="@dimen/setting_item_text_size"
+                android:textColor="#ffffff"
+                android:text="@string/enable_hw_decoding"
+                />
+            <ToggleButton 
+                android:id="@+id/togglebtn_turn_enable_hw_decoding_on"
+                android:layout_gravity="right|center"
+                style="@style/toggle_btn_style"
+                 />
+        </FrameLayout> 
+       <View  style="@style/setting_item_divide_style" />
+       
+          <FrameLayout
+	            android:layout_marginRight="20.0dp"
+                android:layout_marginTop="8.0dp"
+	            android:layout_width="fill_parent"
+	             android:layout_height="wrap_content"
+	            
+            >
+            <TextView 
+                android:layout_marginLeft="20.0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left|center"
+                android:gravity="center"
+                android:textSize="@dimen/setting_item_text_size"
+                android:textColor="#ffffff"
+                android:text="@string/pictrue_quality"
+                
+                />  
+           
+             <Spinner 
+                 
+                 android:id="@+id/spinner_pic_quality"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                  
+                  android:layout_gravity="right|center"
+                 />        
+        </FrameLayout> 
+      <View  style="@style/setting_item_divide_style" />
+               
+           <FrameLayout
+	            android:layout_marginLeft="8.0dp"
+                android:layout_marginRight="20.0dp"
+                android:layout_marginTop="20.0dp" 
+	            android:layout_width="fill_parent"
+	            android:layout_height="40dp"
+            >
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="left|center"
+                android:gravity="center"
+                android:textSize="@dimen/title_text_size"
+                android:textColor="#33b5e5"
+                android:text="@string/about_app"
+                />
+             
+             <TextView
+                    android:id="@+id/tvbtn_arrow_to_about_app" 
+                    style="@style/setting_arrow_right_style"
+                    android:layout_gravity="right|center"
+                     />
+        </FrameLayout>                                     
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

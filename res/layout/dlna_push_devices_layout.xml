@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+     >
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dlna_select_push_device"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:padding="5dp"
+        android:drawableBottom="@drawable/item_divider_gray"
+        />
+    
+		<ListView
+            android:id="@+id/lv_dlna_push_devices"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/item_divider_gray"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:listSelector="@drawable/program_list_item_style" >
+        </ListView>
+</LinearLayout>

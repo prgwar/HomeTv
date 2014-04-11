@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="HandlerLeak">
+        <ignore path="src/org/videolan/libvlc/VLCApplication.java" />
+        <ignore path="src/sdmc/com/hometv/DlnaPlayerActivity.java" />
+        <ignore path="src/sdmc/com/hometv/LocalConnectActivity.java" />
+        <ignore path="src/sdmc/com/hometv/WelcomeActivity.java" />
+        <ignore path="src/sdmc/com/views/AutoFlipGallery.java" />
+        <ignore path="src/sdmc/com/views/CustomMediaController.java" />
+    </issue>
+    <issue id="NewApi">
+        <ignore path="src/sdmc/com/hometv/VideoPlayerActivity.java" />
+    </issue>
+</lint>

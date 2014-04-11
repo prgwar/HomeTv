@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    	xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingLeft="8dp"
+	    android:paddingRight="8dp"
+	    >
+	    <TextView 
+	        android:id="@+id/lv_item_server_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:singleLine="true"
+	        android:textSize="16sp"
+	        android:text="DV7204-T2"/>
+	    <TextView 
+	        android:id="@+id/lv_item_server_ip"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:singleLine="true"
+	        android:textSize="14sp"
+	        android:text="192.168.1.102"
+	        android:layout_marginTop="8.0dp"
+	        android:layout_below="@id/lv_item_server_name"/>
+	    
+	    <TextView
+             android:id="@+id/lv_item_arrow_to_process" 
+             style="@style/setting_arrow_right_style"/>
+</RelativeLayout>

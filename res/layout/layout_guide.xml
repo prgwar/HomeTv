@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hometv="http://schemas.android.com/apk/res/sdmc.com.hometv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:weightSum="1"
+    android:background="@drawable/default_bg">
+   
+    <include layout="@layout/common_head_layout"/>
+     <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.29" >
+        <sdmc.com.views.AutoFlipGallery
+            android:id="@+id/auto_flip_gallery"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:soundEffectsEnabled="false"
+            android:keepScreenOn="true"
+            android:background="#000000"
+            android:fadingEdgeLength="0.0dp"
+             />
+
+        <LinearLayout
+            android:id="@+id/ll_bottomNavPoint"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:background="#00000000"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="5dp" >
+
+            <LinearLayout
+                android:id="@+id/ll_focus_indicator_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" />
+        </LinearLayout>
+    </FrameLayout>
+    <!-- TV Cast 模块 -->
+    <sdmc.com.views.CustomLinearLayout 
+        android:id="@+id/tvcast_module"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.24"
+        android:background="@drawable/selector_for_module_tvcast"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="5.0dp"
+        android:layout_marginLeft="4.0dp"
+        android:layout_marginRight="4.0dp"
+        android:layout_marginBottom="4.0dp"
+        hometv:tvtext="@string/tvcast_module_name"
+        hometv:tvtextsize="@dimen/text_size_in_guide_module"
+        hometv:ivresource="@drawable/tvcast_icon"
+        >
+   </sdmc.com.views.CustomLinearLayout>
+   <LinearLayout 
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_weight="0.4"
+       android:layout_marginLeft="4.0dp"
+       android:layout_marginRight="4.0dp"
+       android:layout_marginBottom="4.0dp"
+       android:baselineAligned="false"
+       android:orientation="horizontal">
+        <!-- 多屏互动模块 -->
+       <sdmc.com.views.CustomLinearLayout 
+	        android:id="@+id/dlan_module"
+	        android:layout_width="0dp"
+	        android:layout_weight="1.0"
+	        android:layout_height="match_parent"
+	        android:background="@drawable/selector_for_module_dlna"
+	        android:orientation="vertical"
+	        android:layout_gravity="center"
+	        android:gravity="center"
+	        android:layout_marginRight="4.0dp"
+	        hometv:tvtext="@string/dlna_module_name"
+	        hometv:tvtextsize="@dimen/text_size_in_guide_module"
+	        hometv:ivresource="@drawable/dlna_icon"
+        >
+       </sdmc.com.views.CustomLinearLayout>
+       <LinearLayout 
+           android:layout_width="0dp"
+           android:layout_weight="1.0"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           >
+            <!-- 遥控模块 -->
+          <sdmc.com.views.CustomLinearLayout 
+	        android:id="@+id/remote_module"
+	        android:layout_width="fill_parent"
+	        android:layout_weight="1.0"
+	        android:layout_height="match_parent"
+	        android:background="@drawable/selector_for_module_remote_control"
+	        android:orientation="vertical"
+	        android:layout_gravity="center"
+	        android:gravity="center"
+	        hometv:tvtext="@string/remote_module_name"
+	        hometv:tvtextsize="@dimen/text_size_in_guide_module"
+	        hometv:ivresource="@drawable/remote_control_icon"
+            >
+          </sdmc.com.views.CustomLinearLayout>
+          	<!-- 设置模块 -->
+          <sdmc.com.views.CustomLinearLayout 
+	        android:id="@+id/setting_module"
+	        android:layout_width="fill_parent"
+	        android:layout_weight="1.0"
+	        android:layout_height="match_parent"
+	        android:background="@drawable/selector_for_module_setting"
+	        android:orientation="vertical"
+	        android:layout_gravity="center"
+	        android:gravity="center"
+	        android:layout_marginTop="4.0dp"
+	        hometv:tvtext="@string/setting_module_name"
+	        hometv:tvtextsize="@dimen/text_size_in_guide_module"
+	        hometv:ivresource="@drawable/setting_icon"
+        >
+       </sdmc.com.views.CustomLinearLayout>
+      </LinearLayout> 
+   </LinearLayout>
+   
+</LinearLayout>

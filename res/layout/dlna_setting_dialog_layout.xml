@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:background="@drawable/dlna_push_bg" >
+    <TextView
+	    android:id="@+id/dlna_setting_head" 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/dlna_setting"
+	    android:gravity="center"
+	    android:textColor="#000000"
+	    android:layout_gravity="center"
+	    android:drawableBottom="@drawable/item_divider_gray"/>
+	<EditText
+	    	android:layout_marginTop="8dp"
+	          android:id="@+id/edit_dlna_name"
+	          android:layout_width="fill_parent"
+	          android:layout_height="wrap_content"
+              android:gravity="left|center"
+              android:layout_gravity="center"
+              android:textColor="#000000"
+              android:textCursorDrawable="@null"
+              android:maxLength="10"
+              android:hint="@string/dlna_set_please_input_name"
+	        />
+	<Button 
+	    android:layout_marginTop="8dp"
+	    android:id="@+id/btn_dlna_setting_commit"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/selector_for_tvbtn"
+	    android:text="@string/sure"
+	    android:layout_margin="5dp"/>
+</LinearLayout>

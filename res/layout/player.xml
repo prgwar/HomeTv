@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_play_view_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!--
+     the double FrameLayout is necessary here to do cropping on the bottom right
+     (which requires the surface not be centered), while keeping the result centered
+    -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="false" >
+
+        <FrameLayout
+            android:id="@+id/player_surface_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:foregroundGravity="clip_horizontal|clip_vertical" >
+
+            <SurfaceView
+                android:id="@+id/player_surface"
+                android:layout_width="1dp"
+                android:layout_height="1dp" />
+        </FrameLayout>
+    </FrameLayout>
+	<RelativeLayout
+	    android:id="@+id/loading_layout" 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent">
+	    <ImageView
+	        android:contentDescription="@null"
+	        android:id="@+id/iv_anime"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/runhorse"
+	        android:layout_centerInParent="true"/>
+	    <TextView 
+	        android:layout_below="@id/iv_anime"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerInParent="true"
+	        android:layout_marginTop="5.0dp"
+	        android:textColor="#FFA54F"
+	        android:text="@string/hard_work_loading"/>
+	</RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/functions_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true" 
+        android:visibility="invisible">
+        
+         <Button
+        android:id="@+id/btn_list"
+        android:layout_width="@dimen/layout_programlist_btn_showmenu_layout_height"
+        android:layout_height="fill_parent"
+        android:layout_gravity="left|center_vertical"
+        android:background="@drawable/menu_show_left" />  
+ 			<!-- 顶部  标题、电量、等布局 -->
+        <LinearLayout
+            android:id="@+id/player_overlay_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:gravity="right"
+            android:background="@color/transparent_gray"
+            android:paddingRight="15dp" >
+
+            <TextView
+                android:id="@+id/player_overlay_title"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="@string/title"
+                android:textColor="#ffffff"
+                android:textSize="15sp" /> 
+
+            <TextView
+                android:id="@+id/player_overlay_battery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:text="20%"
+                android:layout_marginRight="10dp"
+                android:textSize="15sp" 
+                android:gravity="center"
+                android:drawableLeft="@drawable/power_full"
+                />
+
+            <TextView
+                android:id="@+id/player_overlay_systime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:text="11:00"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/player_overlay_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16"
+            android:padding="5dp"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffff"
+            android:textSize="26sp"
+            android:gravity="center"
+            android:visibility="invisible"
+             />
+		<ListView 
+	            android:id="@+id/lv_menu_item_content"
+	            android:layout_width="300dp"
+	            android:layout_height="wrap_content"
+	        	android:divider="@drawable/separator_list"
+	        	android:cacheColorHint="#00000000"
+	        	android:layout_centerInParent="true"
+	        	android:background="@drawable/popwindow_for_program_list_bg"
+	        	android:layout_marginBottom="140dp"
+	        	android:listSelector="@drawable/program_list_item_style">
+	        </ListView>
+	   
+		
+		<!-- 右部，锁屏幕,更多菜单布局 -->
+        <RelativeLayout
+            android:id="@+id/option_overlay"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/player_overlay_header"
+              >
+
+            <ImageButton
+                android:contentDescription="@null"
+                android:id="@+id/ivbtn_lock_screen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/screen_unlock" />
+
+            <ImageButton
+                android:contentDescription="@null"
+                android:id="@+id/ivbtn_more_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/more_menu_show_up" />
+<!-- 
+            <ImageButton
+                android:id="@+id/player_overlay_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/crop_circle" /> -->
+       </RelativeLayout>
+       <!-- 亮度布局 -->
+       <LinearLayout 
+           android:layout_width="wrap_content"
+           android:layout_height="300dp"
+           android:layout_centerVertical="true"
+           android:layout_toRightOf="@id/btn_list"
+           android:gravity="center"
+           android:orientation="vertical"
+           android:visibility="gone"
+           >
+           <ImageView 
+               android:contentDescription="@null"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:background="@drawable/brightness_icon"/>
+           <sdmc.com.views.VerticalSeekBar 
+               android:id="@+id/brightness_seekbar"
+               android:layout_weight="3"
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               />
+       </LinearLayout>
+             <!-- 音量布局 -->
+       <LinearLayout 
+           android:layout_width="wrap_content"
+           android:layout_height="300dp"
+           android:layout_centerVertical="true"
+           android:layout_toLeftOf="@id/option_overlay"
+           android:gravity="center"
+           android:orientation="vertical"
+           android:visibility="gone"
+           >
+           <ImageView 
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:background="@drawable/volume_icon"/>
+           <sdmc.com.views.VerticalSeekBar 
+               android:id="@+id/volume_seekbar"
+               android:layout_weight="3"
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               />
+       </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

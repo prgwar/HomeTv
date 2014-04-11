@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomLinearLayout">
+        <attr name="tvtext" format="reference|string"></attr>
+        <attr name="ivresource" format="reference"></attr>
+        <attr name="tvtextsize" format="dimension"></attr>
+        <attr name="hideiv" format="boolean"></attr>
+    </declare-styleable>
+    
+</resources>

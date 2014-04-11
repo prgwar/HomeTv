@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Home Tv</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <!-- Home tv resource  -->
+	<string name="tvcast_module_name">"TVCast"</string>
+	<string name="dlna_module_name">"Air Sharing"</string>
+	<string name="remote_module_name">"Remote Control"</string>
+	 <string name="setting_module_name">"Settings"</string>
+</resources>

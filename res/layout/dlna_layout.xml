@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/dlna_res_bg"
+    android:id="@+id/dlna_layout_root">
+    
+    <RelativeLayout 
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true">
+        <LinearLayout 
+            android:id="@+id/top_menu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/header">
+            <TextView 
+                android:id="@+id/tvbtn_dlna_device_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/dlna_device_tab"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_forbtn"
+                />
+            <TextView
+                android:id="@+id/tvbtn_dlna_pic_tab" 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/dlna_pic_tab"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:layout_weight="1"
+                android:background="@drawable/selector_forbtn"
+                />
+            <TextView 
+                android:id="@+id/tvbtn_dlna_video_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/dlna_video_tab"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:layout_weight="1"
+                android:background="@drawable/selector_forbtn"
+                />
+            <TextView 
+                android:id="@+id/tvbtn_dlna_music_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/dlna_music_tab"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:layout_weight="1"
+                android:background="@drawable/selector_forbtn"
+                />
+            <!-- <ImageButton 
+                android:contentDescription="@null"
+                android:id="@+id/ivbtn_scan_media"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/scan_media_icon"/> -->
+        </LinearLayout>
+        <ImageView
+        android:id="@+id/tab_top_select_indicator"
+        android:contentDescription="@null"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="matrix"
+         
+        android:src="@drawable/pageview_indicator" />
+       
+    </RelativeLayout>
+    <!-- ************** content  ********************* -->
+    <TextView 
+        android:id="@+id/tv_dlna_res_dirs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000" 
+        android:singleLine="true"         
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/title_layout"
+         android:layout_marginTop="3dp"
+         android:layout_marginBottom="8dp"
+         android:gravity="center"
+         android:visibility="gone"
+        />
+    <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_dlna_res_dirs">
+        <LinearLayout 
+            android:id="@+id/loading_data_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="invisible"
+            >
+            <ProgressBar 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            
+      <!--   
+        <include layout="@layout/dlna_device_layout"/>
+	    <include layout="@layout/dlna_pic_layout"/>
+	    <include layout="@layout/dlna_video_layout"/>
+	    <include layout="@layout/dlna_music_layout"/>   -->
+	 
+	 </android.support.v4.view.ViewPager>
+   </FrameLayout>
+	
+</RelativeLayout>

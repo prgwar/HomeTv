@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:background="@drawable/popwindow_for_program_list_bg"
+    android:id="@+id/linear_epg">
+   <!--  <LinearLayout
+    	style="@style/Horiz_Linear_style"
+    	android:layout_weight="1"
+    	android:gravity="center">
+    	 
+    	<TextView 
+    	    android:id="@+id/text_epg_time"
+			android:layout_width="0dp"
+    		android:layout_height="fill_parent"
+	    	android:layout_weight="1"
+			android:textSize="@dimen/medium_textSize"/>
+		
+    </LinearLayout> -->
+    <LinearLayout
+    	style="@style/Horiz_Linear_style"
+    	android:layout_weight="1">
+		<Button 
+		    android:id="@+id/btn_week1"
+		    style="@style/button_week_style"/>
+		<Button 
+		    android:id="@+id/btn_week2"
+		    style="@style/button_week_style"/>
+		<Button 
+		    android:id="@+id/btn_week3"
+		    style="@style/button_week_style"/>
+		<Button 
+		    android:id="@+id/btn_week4"
+		    style="@style/button_week_style"/>
+		<Button 
+		    android:id="@+id/btn_week5"
+		    style="@style/button_week_style"/>
+		<Button 
+		    android:id="@+id/btn_week6"
+		    style="@style/button_week_style"/>
+		<Button 
+		    android:id="@+id/btn_week7"
+		    style="@style/button_week_style"/>
+    </LinearLayout>
+    
+    <FrameLayout
+    	style="@style/Horiz_Linear_style"
+    	android:layout_weight="8">
+		<ListView 
+		    android:id="@+id/list_epg"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:cacheColorHint="#00000000"
+		    android:layout_gravity="center"
+		    android:visibility="invisible">
+		</ListView>
+		<TextView 
+		    android:id="@+id/tv_detail_no_epg"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_gravity="center"
+		    android:gravity="center_vertical"
+		    android:textColor="#ffffff"
+		    android:visibility="invisible"
+		    android:text="@string/no_detail_epg"/>
+		<ProgressBar 
+		    android:id="@+id/loading_detail_epg"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="center"/>
+    </FrameLayout>
+</LinearLayout>
